@@ -176,6 +176,253 @@ nav a:hover{
    line-height: 1.6;
 }
 
+#quandoAcionar{
+   background-color: var(--cor-secundaria);
+   padding: 80px 0;
+}
+
+#quandoAcionar h2{
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 2em;
+   color: var(--cor-primaria);
+}
+
+.intro{
+   text-align: center;
+   max-width: 800px;
+   margin: 0 auto 60px auto;
+   font-size: 1.1em;
+   color: var(--cor-texto-claro);
+}
+
+.categorias-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 30px;
+}
+
+.categoria-card{
+   background-color: white;
+   padding: 30px;
+   border-radius: 10px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   transition: transform 0.3s ease;
+}
+
+.categoria-card:hover{
+   transform: translateY(-5px);
+   box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.categoria-card i {
+   font-size: 2.5em;
+   color: var(--cor-primaria);
+   margin-bottom: 15px;
+   display: block;
+}
+
+.categoria-card h3{
+   font-size: 1.3em;
+   margin-bottom: 20px;
+   color: var(--cor-primaria);
+}
+
+.categoria-card ul{
+   list-style: none;
+   padding: 0;
+}
+
+.categoria-card li{
+   padding-left: 25px;
+   margin-bottom: 10px;
+   position: relative;
+   font-size: .95em;
+   color: var(--cor-texto);
+   line-height: 1.6;
+}
+
+.categoria-card li::before{
+   content: "\2022";
+   position: absolute;
+   left: 0;
+   color: var(--cor-primaria);
+   font-weight: bold;
+   font-size: 1.2em;
+}
+
+#direitos {
+   background-color: white;
+   padding: 80px 0;
+}
+
+#direitos h2 {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 2em;
+   color: var(--cor-primaria);
+}
+
+#direitos .intro {
+   text-align: center;
+   max-width: 800px;
+   margin: 0 auto 60px auto;
+   font-size: 1.1em;
+   color: var(--cor-texto-claro);
+}
+
+.timeline {
+   position: relative;
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 40px 0;
+}
+
+/* Linha vertical central */
+.timeline::before {
+   content: '';
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 4px;
+   height: 100%;
+   background-color: var(--cor-primaria);
+   top: 0;
+}
+
+.timeline-item {
+   position: relative;
+   margin-bottom: 60px;
+   display: flex;
+   align-items: center;
+}
+
+/* Items à esquerda do ícone */
+.timeline-item:nth-child(odd) {
+   justify-content: flex-end;
+   padding-right: 50%;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+   text-align: right;
+   padding-right: 60px;
+}
+
+/* Items à direita do ícone */
+.timeline-item:nth-child(even) {
+   justify-content: flex-start;
+   padding-left: 50%;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+   text-align: left;
+   padding-left: 60px;
+}
+
+.timeline-icon {
+   position: absolute;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 70px;
+   height: 70px;
+   background-color: white;
+   border: 4px solid var(--cor-primaria);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 2;
+   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.timeline-icon i {
+   font-size: 2em;
+   color: var(--cor-primaria);
+}
+
+.timeline-content {
+   max-width: 450px;
+}
+
+.timeline-content h3 {
+   font-size: 1.4em;
+   color: var(--cor-primaria);
+   margin-bottom: 10px;
+}
+
+.timeline-content p {
+   font-size: 1em;
+   color: var(--cor-texto);
+   line-height: 1.7;
+}
+
+footer {
+   background-color: var(--cor-primaria);
+   color: white;
+   padding: 60px 0 20px 0;
+}
+
+.footer-content {
+   display: flex;
+   justify-content: space-between;
+   gap: 60px;
+   margin-bottom: 40px;
+}
+
+.footer-section {
+   flex: 1;
+}
+
+.footer-section h3 {
+   font-size: 1.4em;
+   margin-bottom: 20px;
+   color: white;
+}
+
+.footer-section p {
+   font-size: 0.95em;
+   line-height: 1.8;
+   color: rgba(255, 255, 255, 0.9);
+   margin-bottom: 10px;
+}
+
+.footer-section ul {
+   list-style: none;
+   padding: 0;
+}
+
+.footer-section li {
+   margin-bottom: 12px;
+}
+
+.footer-section a {
+   color: white;
+   text-decoration: none;
+   font-size: 0.95em;
+   transition: color 0.3s ease;
+   display: inline-block;
+}
+
+.footer-section a:hover {
+   color: var(--cor-secundaria);
+   transform: translateX(5px);
+}
+
+.footer-bottom {
+   text-align: center;
+   padding-top: 30px;
+   border-top: 1px solid rgba(255, 255, 255, 0.2);
+   margin-top: 20px;
+}
+
+.footer-bottom p {
+   font-size: 0.9em;
+   color: rgba(255, 255, 255, 0.8);
+}
+
+
+
+
 
 
 
@@ -231,6 +478,84 @@ nav a:hover{
       font-size: 1.8em;
    }
 
+   .categorias-grid{
+      grid-template-columns: 1fr;
+   }
+
+   #quandoAcionar h2{
+      font-size: 1.8em;
+   }
+
+   .intro{
+      font-size: 1em;
+      margin-bottom: 40px;
+   }
+
+   .timeline::before {
+      left: 35px;
+   }
+   
+   .timeline-item {
+      padding-left: 100px !important;
+      padding-right: 0 !important;
+      justify-content: flex-start !important;
+      margin-bottom: 40px;
+   }
+   
+   .timeline-item:nth-child(odd) .timeline-content,
+   .timeline-item:nth-child(even) .timeline-content {
+      text-align: left;
+      padding: 0;
+   }
+   
+   .timeline-icon {
+      left: 35px;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 60px;
+   }
+   
+   .timeline-icon i {
+      font-size: 1.6em;
+   }
+   
+   .timeline-content {
+      max-width: 100%;
+   }
+   
+   .timeline-content h3 {
+      font-size: 1.2em;
+   }
+   
+   .timeline-content p {
+      font-size: 0.95em;
+   }
+   
+   #direitos h2 {
+      font-size: 1.8em;
+   }
+   
+   #direitos .intro {
+      font-size: 1em;
+   }
+
+   footer {
+      padding: 40px 0 20px 0;
+   }
+   
+   .footer-content {
+      flex-direction: column;
+      gap: 40px;
+   }
+   
+   .footer-section h3 {
+      font-size: 1.2em;
+   }
+   
+   .footer-section p,
+   .footer-section a {
+      font-size: 0.9em;
+   }
 
 
 
