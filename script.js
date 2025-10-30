@@ -51,3 +51,31 @@ window.addEventListener('load', updateActiveNav);
 
 // Executa ao scrollar
 window.addEventListener('scroll', updateActiveNav);
+
+
+// Menu Hamburguer mobile
+const menuToggle = document.querySelector('.menu-toggle');
+const nav = document.querySelector('nav');
+const navLinks = document.querySelectorAll('nav a');
+
+// Abrir/fechar menu ao clicar no botao
+menuToggle.addEventListener('click', ()=>{
+   menuToggle.classList.toggle('active');
+   nav.classList.toggle('active');
+});
+
+// Fechar menu ao clicar em link
+navLinks.forEach(link =>{
+   link.addEventListener('click', ()=>{
+      menuToggle.classList.remove('active');
+      nav.classList.remove('active');
+   });
+});
+
+// Fechar menu ao clicar fora dele
+document.addEventListener('click', (e) => {
+   if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+      menuToggle.classList.remove('active');
+      nav.classList.remove('active');
+   }
+});
