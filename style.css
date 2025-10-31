@@ -158,6 +158,8 @@ nav a.active{
    border-radius: 10px;
 }
 
+/* SEÇÃO - O QUE É O CONSELHO? */
+
 #oQueE{
    background-color: var(--cor-secundaria);
    padding: 80px 0;
@@ -165,13 +167,20 @@ nav a.active{
 
 #oQueE h2{
    text-align: center;
-   margin-bottom: 40px;
+   margin-bottom: 30px;
    font-size: 2em;
+   color: var(--cor-primaria);
 }
 
-.texto-content{
-   max-width: 900px;
-   margin: 0 auto;
+.oque-content{
+   display: flex;
+   align-items: center;
+   gap: 60px;
+}
+
+.oque-content .texto-content{
+   flex: 1;
+   max-width: 100%;
    text-align: justify;
 }
 
@@ -180,6 +189,20 @@ nav a.active{
    font-size: 1.1em;
    line-height: 1.8;
 }
+
+.oque-image{
+   flex: 1;
+}
+
+.oque-image img{
+   width: 100%;
+   height: auto;
+   border-radius: 10px;
+   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+   transform: scaleX(-1);
+}
+
+/* FIM SEÇÃO - O QUE É O CONSELHO? */
 
 #atribuicoes{
    background-color: white;
@@ -540,8 +563,15 @@ footer {
       font-size: 2em;
    }
 
+/* INÍCIO SEÇÃO - O QUE É O CONSELHO? */
+
+   .oque-content{
+      flex-direction: column-reverse;
+   }
+
    #oQueE h2{
       font-size: 1.8em;
+      margin-bottom: 40px;
    }
 
    .texto-content{
@@ -551,6 +581,8 @@ footer {
    #oQueE p{
       font-size: 1em;
    }
+
+   /* FIM SEÇÃO - O QUE É O CONSELHO? */
 
    .grid-atribuicoes{
       grid-template-columns: 1fr;
