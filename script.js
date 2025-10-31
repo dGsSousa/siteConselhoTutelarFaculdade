@@ -79,3 +79,37 @@ document.addEventListener('click', (e) => {
       nav.classList.remove('active');
    }
 });
+
+// Accordion mobile para atribuições
+function initAccordion() {
+   const cards = document.querySelectorAll('.card-atribuicao');
+   
+   cards.forEach(card => {
+      card.addEventListener('click', function() {
+         // Só funciona no mobile (largura <= 768px)
+         if (window.innerWidth <= 768) {
+            // Se o card clicado já está ativo, apenas fecha ele
+            const isActive = this.classList.contains('active');
+            
+            // Fecha todos os cards
+            cards.forEach(c => c.classList.remove('active'));
+            
+            // Se não estava ativo, abre o clicado
+            if (!isActive) {
+               this.classList.add('active');
+            }
+         }
+      });
+   });
+}
+
+// Inicializa ao carregar
+window.addEventListener('load', initAccordion);
+
+// Reinicializa ao redimensionar (opcional)
+window.addEventListener('resize', () => {
+   const cards = document.querySelectorAll('.card-atribuicao');
+   if (window.innerWidth > 768) {
+      cards.forEach(card => card.classList.remove('active'));
+   }
+});

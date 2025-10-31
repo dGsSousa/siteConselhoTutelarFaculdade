@@ -232,6 +232,10 @@ nav a.active{
    line-height: 1.6;
 }
 
+.arrow{
+   display: none;
+}
+
 #quandoAcionar{
    background-color: var(--cor-secundaria);
    padding: 80px 0;
@@ -555,6 +559,61 @@ footer {
    #atribuicoes h2{
       font-size: 1.8em;
    }
+
+   /* Acordion nas atribuições - MOBILE */
+
+   .card-atribuicao{
+      padding: 0;
+      cursor: pointer;
+      text-align: left;
+   }
+
+   .card-header{
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      gap: 15px;
+   }
+
+   .card-header i:not(.arrow){
+      font-size: 1.5em;
+      margin: 0;
+   }
+
+   .card-header h3{
+      flex: 1;
+      margin: 0;
+      font-size: 1em;
+   }
+
+   .arrow{
+      font-size: 1.2em;
+      color: var(--cor-primaria);
+      transition: transform 0.3s ease;
+      display: block;
+   }
+
+   .card-atribuicao.active .arrow{
+      transform: rotate(180deg);
+   }
+
+   .card-body{
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+      padding: 0 20px;
+   }
+
+   .card-atribuicao.active .card-body{
+      max-height: 500px;
+      padding: 0 20px 20px 20px;
+   }
+
+   .card-body p{
+      margin: 0;
+   }
+
+   /* FIM ACORDION */
 
    .categorias-grid{
       grid-template-columns: 1fr;
