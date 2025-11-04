@@ -113,3 +113,4 @@ window.addEventListener('resize', () => {
       cards.forEach(card => card.classList.remove('active'));
    }
 });
+
