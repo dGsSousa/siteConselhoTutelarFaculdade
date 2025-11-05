@@ -1,8 +1,8 @@
 :root {
-  --cor-primaria: #4A90A4;
-  --cor-secundaria: #f5e6d3;
-  --cor-texto: #333;
-  --cor-texto-claro: #666;
+--cor-primaria: #008B8B; /* teal */
+--cor-secundaria: #E8F5F3; /* menta pálido */
+--cor-texto: #1a4d4d;
+--cor-texto-claro: #5a7f7f;
 }
 
 *{
@@ -97,8 +97,8 @@ nav a:hover{
 }
 
 nav a.active{
-   background-color: var(--cor-texto-claro);
-   transform: scale(1.05);
+   background-color: #294646;
+   
 }
 
 .reveal{
@@ -207,7 +207,7 @@ nav a.active{
 /* INÍCIO SEÇÃO - ATRIBUIÇÕES */
 
 #atribuicoes{
-   background-color: white;
+   background-color: rgb(255, 255, 255);
    background-image: url(images/atribuicoes-bg.jpg);
    background-size: cover;
    background-position: center;
@@ -257,7 +257,7 @@ nav a.active{
 
 .card-atribuicao:hover{
    transform: translateY(-10px);
-   background-color: #e7d4ba;
+   background-color: #d9f3ef;
    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
@@ -289,7 +289,7 @@ nav a.active{
 
 #quandoAcionar{
    background-color: var(--cor-secundaria);
-   background-image: url(images/quando-acionar-bg.jpg);
+   background-image: url(images/quando-acionar-bg.webp);
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
@@ -333,6 +333,7 @@ nav a.active{
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    gap: 30px;
+   will-change: contents;
 }
 
 .categoria-card{
