@@ -24,13 +24,38 @@ body{
 }
 
 header{
-   background-color: var(--cor-secundaria);
+   background-image: url(images/header-bg.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
    padding: 30px;
    position: fixed;
    top: 0;
    width: 100%;
    z-index: 1000;
    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(22, 206, 175, 0.623);
+   z-index: -1;
+}
+
+.logo-title{
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+
+.logo{
+   height: 70px;
+   width: auto;
 }
 
 .header-container{
@@ -41,8 +66,9 @@ header{
 }
 
 h1{
-   font-size: 3em;
-   color: var(--cor-primaria);
+   font-size: 2em;
+   color: var(--cor-secundaria);
+   margin: 0;
 }
 
 .menu-toggle{
@@ -623,14 +649,22 @@ footer {
 
 @media (max-width: 768px){
 
+   .logo{
+      height: 35px;
+   }
+   
+   h1{
+      font-size: 1.5em;
+   }
+
    .header-container {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
    }
-
-   h1{
-      font-size: 2em;
+   
+   .logo-title{
+      gap: 10px;
    }
 
    .menu-toggle{
