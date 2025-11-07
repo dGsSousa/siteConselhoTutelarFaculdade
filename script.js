@@ -114,3 +114,22 @@ window.addEventListener('resize', () => {
    }
 });
 
+// Slider automático simples
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+   slides.forEach(slide => slide.classList.remove('active'));
+   slides[index].classList.add('active');
+}
+
+function nextSlide() {
+   currentSlide = (currentSlide + 1) % totalSlides;
+   showSlide(currentSlide);
+}
+
+// Inicia o slider se existirem slides
+if (slides.length > 0) {
+   setInterval(nextSlide, 3000); // troca a cada 4 segundos
+}
